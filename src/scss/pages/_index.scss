@@ -137,8 +137,23 @@ main {
 
         &--full {
             .content-full {
+                margin: 50px 0;
                 position: relative;
                 z-index: 2;
+            }
+
+            .ambienteuno  {
+                background:url(../images/img-ambiente.png) center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 500px;
+            }
+
+            .ambientedos  {
+                background:url(../images/img-ambiente2.png) center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 500px;
             }
         }
     }
@@ -376,6 +391,7 @@ main {
 
     .hero {
         background-position: 85% 0;
+        min-height: 700px;
         
 
         &__inner {
@@ -502,6 +518,7 @@ main {
                         @include flexbox;
                         @include justify-content(center);
                         padding: 100px 50px;
+                        margin: 0;
                         text-align: left;
                         position: relative;
                         z-index: 2;
@@ -540,6 +557,10 @@ main {
 
         .content-left {
             text-align: left;
+        }
+
+        .content-right {
+            text-align: right;
         }
 
        
@@ -601,9 +622,14 @@ main {
 
     .section-eight {
         padding-top: 0;
-        margin-bottom: -50px;
         .section__row--full .section__col.content-full {
-            padding-bottom: 0;
+            padding: 100px 100px 150px 0;
+            @include flexbox;
+            @include align-items(flex-end);
+            @include flex-direction(column);
+            h2, p {
+                max-width: 480px;
+            }
         }
     }
      
