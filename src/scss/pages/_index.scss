@@ -61,7 +61,7 @@ main {
 
     .floating-item {
         position: absolute;
-        bottom: -50px;
+        bottom: -90px;
         left: 0%;
         animation: float 7s ease-in-out infinite;
         z-index: 3;
@@ -225,10 +225,10 @@ main {
 
 .backgroundOne {
     background: url(../images/bg-section2.png) no-repeat bottom left $c-neutro;
-    background-size: 50%;
+    background-size: 10%;
     animation: shrink 5s infinite alternate;
     color: $c-text;
-    padding: 200px 0 100px;
+    padding: 200px 0 0;
     position: relative;
     top: -50px;
     z-index: 1;
@@ -242,7 +242,7 @@ main {
             display: block;
             width: 90%;
             max-width: 388px;
-            margin: 50px auto 80px;
+            margin: 50px auto 30px;
         }
     }
 
@@ -255,6 +255,10 @@ main {
 
 .text--orange {
     color: $c-orange-light;
+}
+
+.background--grey {
+    background: $c-light-grey;
 }
 
 .background-half-grey {
@@ -291,6 +295,7 @@ main {
         top: 40%;
         z-index: 1;
         animation: float 7s ease-in-out infinite;
+        display: none;
     }
 
     .floating-item5 {
@@ -299,12 +304,13 @@ main {
         top: 30%;
         z-index: 1;
         animation: float 10s ease-in-out infinite;
+        display: none;
     }
 }
 
 .section-six {
     position: relative;
-    padding: 100px 0;
+    padding: 40px 0;
     .floating-item6 {
         position: absolute;
         left: 0;
@@ -339,6 +345,10 @@ main {
             }
         }
     }
+}
+
+.section-eight {
+    padding-top: 50px;
 }
 
 .btn {
@@ -535,16 +545,22 @@ main {
        
     }
 
-    .background--grey {
-        background: $c-light-grey;
-    }
+   
  
     .backgroundOne {   
         background: url(../images/bg-section2.png) no-repeat bottom left $c-neutro;
-        
+        padding: 200px 0 100px;
+
         .section__inner {
             @include align-items(center);
             color: $c-text;
+
+            img {
+                display: block;
+                width: 90%;
+                max-width: 388px;
+                margin: 50px auto 80px;
+            }
         }
 
         .section-logos {
@@ -554,7 +570,19 @@ main {
         
     }
 
+    .background-half-grey {
+
+        .floating-item4 {
+        display: block;
+        }
+
+        .floating-item5 {
+            display: block;
+        }
+    }
+
     .section-six {
+        padding: 100px 0;
         .floating-item6 {
             display: block;
         }
@@ -572,6 +600,8 @@ main {
     }
 
     .section-eight {
+        padding-top: 0;
+        margin-bottom: -50px;
         .section__row--full .section__col.content-full {
             padding-bottom: 0;
         }
