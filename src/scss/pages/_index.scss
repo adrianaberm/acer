@@ -5,9 +5,10 @@ main {
 .hero {
     @include flexbox;
     @include flex-direction(column);
-    @include align-items(center);
+    @include align-items(flex-start);
+    @include justify-content(flex-start);
     background: url(../images/hero.jpg) no-repeat $c-neutro;
-    background-position: 85% 0;
+    background-position: 90% 0;
     background-attachment: fixed;
     background-size: cover;
     color: $c-neutro;
@@ -15,10 +16,14 @@ main {
     overflow: hidden;
 
     &__image {
+        position:relative;
+        z-index: 4;
+        
         img {
             mix-blend-mode: multiply;
             width: 90%;
             max-width: 654px;
+      
         }
     }
 
@@ -27,8 +32,9 @@ main {
         @include flex-direction(column);
         @include align-items(center);
         max-width: 1440px;
-        margin: auto;
+        margin: 18vh auto 0;
         width: 100%;
+       
     }
 
     &__content {
@@ -36,6 +42,8 @@ main {
         @include flex-direction(column);
         @include align-items(center);
         margin-top: 50px;
+        position:relative;
+        z-index: 4;
 
         p {
             @include font-rem(26px);
@@ -392,11 +400,15 @@ main {
     .hero {
         background-position: 85% 0;
         min-height: 700px;
+        @include align-items(center);
+        @include justify-content(center);
         
 
         &__inner {
             @include align-items(center);
+            @include justify-content(center);
             @include flex-direction(row);
+            margin: auto;
         }
 
         &__image {
